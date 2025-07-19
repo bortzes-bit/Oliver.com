@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Personal Webpage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to right, #add8e6, #ffffff, #dda0dd, #ffc0cb);
+      color: #333;
+      animation: fadeIn 2s ease-in;
+    }
+
+    header {
+      background-color: #6495ed;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      animation: slideDown 1.2s ease-out;
+    }
+
+    section {
+      padding: 30px;
+      text-align: center;
+      animation: fadeIn 2s ease;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .sound-button {
+      margin: 10px;
+      padding: 12px 25px;
+      background-color: #87cefa;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .sound-button:hover {
+      background-color: #4682b4;
+    }
+
+    .favorites {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+
+    footer {
+      background-color: #b0c4de;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      animation: fadeIn 3s ease;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    @keyframes slideDown {
+      from {transform: translateY(-50px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+
+    @media (max-width: 600px) {
+      .gallery img {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to My World</h1>
+    <p>By Oliver Kent</p>
+
+  </header>
+
+  <section>
+    <h2>About Me</h2>
+    <p>Hi! I'm a creative soul who loves theatre, design, Music, Coding, and storytelling. This is a glimpse into my colorful world.</p>
+  </section>
+
+  <section>
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://i.ibb.co/zV789sJV/IMG-0686.jpg" alt="IMG-0686">
+      <img src="https://i.ibb.co/Z61XjZbj/IMG-0602.jpg" alt="IMG-0602">
+      <img src="https://i.ibb.co/XkbJnHQK/IMG-0556.jpg" alt="IMG-0556">
+    </div>
+  </section>
+
+  <section>
+    <h2>🎵 Favorite Sounds</h2>
+    <div class="favorites">
+      <button class="sound-button" onclick="playSound('spongebob')">SpongeBob Laugh</button>
+      <button class="sound-button" onclick="playSound('ohmygod')">Oh My God</button>
+      <button class="sound-button" onclick="playSound('emotional')">Emotional Damage</button>
+    </div>
+
+    <!-- Audio elements -->
+    <audio id="spongebob" src="https://www.myinstants.com/media/sounds/spongebob-laughing-cartoon-running.mp3"></audio>
+    <audio id="ohmygod" src="https://www.myinstants.com/media/sounds/oh-my-god-meme.mp3"></audio>
+    <audio id="emotional" src="https://www.myinstants.com/media/sounds/emotional-damage-meme.mp3"></audio>
+
+    <script>
+      function playSound(id) {
+        document.getElementById(id).play();
+      }
+    </script>
+  </section>
+
+  <section>
+    <h2>💖 My Favorite Things</h2>
+    <ul style="list-style: none; padding: 0; font-size: 18px;">
+      <li>🌈 Colors: Red, Blue, Purple</li>
+      <li>🎮 Games: Minecraft, Fortnite</li>
+      <li>🎶 Music: Queen, WeirdAL Yankovic</li>
+      <li>🎥 Movies: Pee-wee’s Big Adventure, Jurassic Park, Back to the Future</li>
+      <li>🐶 Toys: Pokemon cards, Prop replicas, stuffies</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Thanks for visiting my page! 💙</p>
+  </footer>
+
+</body>
+</html>
